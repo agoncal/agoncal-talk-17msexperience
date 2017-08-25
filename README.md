@@ -15,6 +15,12 @@ In this demo we have a simple REST API (developed with [Spring Boot](https://pro
 └── pom.xml
 ```
 
+### Number API
+
+* HTTP GET on [http://localhost:8080/api/isbn]()
+* Swagger contract on [http://localhost:8080/v2/api-docs]()
+* Swagger UI on [http://localhost:8080/swagger-ui.html]()
+
 ## Demo 02
 
 In this demo, we keep the Number API and we add another REST API that inserts Books into a database. 
