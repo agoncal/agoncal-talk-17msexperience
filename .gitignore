@@ -28,6 +28,7 @@ Temporary Items
 .apdisk
 ### Maven
 target/
+!.mvn/wrapper/maven-wrapper.jar
 ### Java template
 # Compiled class file
 *.class
