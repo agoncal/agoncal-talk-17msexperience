@@ -1,0 +1,11 @@
+version: '2'
+services:
+    bookapi-postgresql:
+        image: postgres:9.6.2
+        # volumes:
+        #     - ~/volumes/jhipster/bookapi/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=bookapi
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "isbn",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170825124456",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "book",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no",
+    "microserviceName": "bookapi",
+    "searchEngine": false
+}
