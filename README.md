@@ -38,3 +38,22 @@ In this demo, we keep the Number API and we add another REST API that inserts Bo
 │   └── src
 └── pom.xml
 ```
+
+### Registry
+
+Now that we are living in a Microservices world, we need a registry. We will use the JHipster registry.
+
+* Execute the registry with Docker
+* `docker-compose -f book-api/src/main/docker/jhipster-registry.yml up`
+* Check the admin console at http://localhost:8761
+
+### Console
+
+The microservices send the logs to the JHipster Console. This way all the metrics are aggregated in a single console.
+
+* Execute the console with Docker
+* `docker-compose -f book-api/src/main/docker/jhipster-console.yml up`
+* Check the admin console at http://localhost:8761
+
+
+### Number API
