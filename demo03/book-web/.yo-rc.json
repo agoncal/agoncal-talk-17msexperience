@@ -1,7 +1,8 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "org.agoncal.talk.msexperience.demo03.bookweb"
+      "packageName": "org.agoncal.talk.msexperience.demo03.bookweb",
+      "microservicePath": "../book-api"
     },
     "jhipsterVersion": "4.8.0",
     "baseName": "bookweb",
