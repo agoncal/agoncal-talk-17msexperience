@@ -1,0 +1,16 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "book-api",
+      "book-web",
+      "number-api"
+    ],
+    "directoryPath": "../",
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "efe6872c97c3dda8b4f7ceadd7d9d700f4740d2e",
+    "dockerRepositoryName": "agoncal",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "LoadBalancer"
+  }
+}
