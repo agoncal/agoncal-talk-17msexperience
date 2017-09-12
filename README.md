@@ -17,9 +17,11 @@ In this demo we have a simple REST API (developed with [Spring Boot](https://pro
 
 ### Number API
 
+* `mvn clean install` creates the executable Spring Boot war file (`target/number-api-1.0.jar`)
+* Execute the service with `java -jar target/number-api-1.0.jar`
 * HTTP GET on [http://localhost:8080/api/isbn]()
 * Swagger contract on [http://localhost:8080/v2/api-docs]()
-* Swagger UI on [http://localhost:8080/swagger-ui.html]()
+* Swagger UI on [http://localhost:8080/swagger-ui.html#/isbn-resource]()
 
 ## Demo 02
 
