@@ -23,6 +23,10 @@ In this demo we have a simple REST API (developed with [Spring Boot](https://pro
 * Swagger contract on [http://localhost:8080/v2/api-docs]()
 * Swagger UI on [http://localhost:8080/swagger-ui.html#/isbn-resource]()
 
+### Number Web
+
+Angular Web app invoking Number API
+
 ## Demo 02
 
 In this demo, we keep the Number API and we add another REST API that inserts Books into a database. 
