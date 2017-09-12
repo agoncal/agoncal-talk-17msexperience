@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "org.agoncal.talk.msexperience.demo02.bookapi"
     },
-    "jhipsterVersion": "4.7.0",
+    "jhipsterVersion": "4.8.0",
     "baseName": "bookapi",
     "packageName": "org.agoncal.talk.msexperience.demo02.bookapi",
     "packageFolder": "org/agoncal/talk/msexperience/demo02/bookapi",

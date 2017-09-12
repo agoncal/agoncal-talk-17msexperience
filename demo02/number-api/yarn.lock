@@ -633,9 +633,9 @@ gauge@~1.2.5:
     lodash.padend "^4.1.0"
     lodash.padstart "^4.1.0"
 
-generator-jhipster@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/generator-jhipster/-/generator-jhipster-4.7.0.tgz#247ca73f78d0b2ec41353679d1b30c4e926bf84f"
+generator-jhipster@4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/generator-jhipster/-/generator-jhipster-4.8.0.tgz#a4ff68f659f09b219940a4d5602744bc38dd036d"
   dependencies:
     chalk "2.1.0"
     cheerio "0.22.0"
