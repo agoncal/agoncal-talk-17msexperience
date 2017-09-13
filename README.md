@@ -29,16 +29,20 @@ Angular Web app invoking Number API
 
 ## Demo 02
 
+This demo is deprecated has it uses Postgres instead of MongoDB
+
+## Demo 03
+
 In this demo, we keep the Number API and we add another REST API that inserts Books into a database. 
 
 ```
-├── book-api : REST API inserting a book into a database (needs the Number API)
+├── book-api : REST API inserting a book into a MongoDB database (needs the Number API)
 │   ├── pom.xml
 │   └── src
-├── number-API : REST API returning a random ISBN number
+├── number-API : REST API returning a random ISBN number (no database)
 │   ├── pom.xml
 │   └── src
-├── book-web : Angular Web interface interacting with the Book
+├── book-web : Angular gateway interacting with the Book API (Postgres is needed to store users and roles)
 │   └── src
 └── pom.xml
 ```
@@ -61,3 +65,17 @@ The microservices send the logs to the JHipster Console. This way all the metric
 
 
 ### Number API
+
+* Public API (no authorization)
+* HTTP GET on [http://localhost:8081/api/isbn]()
+* Swagger contract on [http://localhost:8081/v2/api-docs]()
+
+### Book API
+
+* Secured API (needs authorization)
+* HTTP GET on [http://localhost:8082/api/books]()
+* Swagger contract on [http://localhost:8082/v2/api-docs]()
+
+### Book Web
+
+* [http://localhost:8080]()
