@@ -1,6 +1,7 @@
 package org.agoncal.talk.msexperience.demo03.bookapi.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import org.agoncal.talk.msexperience.demo03.bookapi.client.isbn.api.ApiApiClient;
 import org.agoncal.talk.msexperience.demo03.bookapi.domain.Book;
 
 import org.agoncal.talk.msexperience.demo03.bookapi.repository.BookRepository;
@@ -8,6 +9,7 @@ import org.agoncal.talk.msexperience.demo03.bookapi.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +30,8 @@ public class BookResource {
     private final Logger log = LoggerFactory.getLogger(BookResource.class);
 
     private static final String ENTITY_NAME = "book";
-
+    @Autowired
+    private ApiApiClient numberApi;
     private final BookRepository bookRepository;
     public BookResource(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -48,6 +51,9 @@ public class BookResource {
         if (book.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new book cannot already have an ID")).body(null);
         }
+        ResponseEntity<String> response = numberApi.generateIsbnNumberUsingGET();
+        String isbn = response.getBody();
+        book.setIsbn(isbn);
         Book result = bookRepository.save(book);
         return ResponseEntity.created(new URI("/api/books/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
