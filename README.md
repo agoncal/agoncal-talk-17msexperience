@@ -72,10 +72,12 @@ The microservices send the logs to the JHipster Console. This way all the metric
 
 ### Book API
 
-* Secured API (needs authorization)
+* Needs MongoDB `docker-compose -f book-api/src/main/docker/mongodb.yml up`
+* Public API (no authorization because changed `MicroserviceSecurityConfiguration`)
 * HTTP GET on [http://localhost:8082/api/books]()
 * Swagger contract on [http://localhost:8082/v2/api-docs]()
 
 ### Book Web
 
+* Needs Postgres `docker-compose -f book-web/src/main/docker/postgresql.yml up `
 * [http://localhost:8080]()
