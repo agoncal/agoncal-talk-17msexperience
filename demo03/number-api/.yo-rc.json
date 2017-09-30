@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "org.agoncal.talk.msexperience.demo03.numberapi"
     },
-    "jhipsterVersion": "4.8.0",
+    "jhipsterVersion": "4.9.0",
     "baseName": "numberapi",
     "packageName": "org.agoncal.talk.msexperience.demo03.numberapi",
     "packageFolder": "org/agoncal/talk/msexperience/demo03/numberapi",

@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "org.agoncal.talk.msexperience.demo03.bookapi"
     },
-    "jhipsterVersion": "4.8.0",
+    "jhipsterVersion": "4.9.0",
     "baseName": "bookapi",
     "packageName": "org.agoncal.talk.msexperience.demo03.bookapi",
     "packageFolder": "org/agoncal/talk/msexperience/demo03/bookapi",
@@ -29,5 +29,15 @@
     "skipClient": true,
     "skipUserManagement": true,
     "clientPackageManager": "yarn"
+  },
+  "generator-jhipster-swagger-cli": {
+    "apis": {
+      "isbn": {
+        "spec": "http://localhost:8081/v2/api-docs",
+        "cliTypes": [
+          "back"
+        ]
+      }
+    }
   }
 }

@@ -24,6 +24,8 @@ spec:
             secretKeyRef:
               name: registry-secret
               key: registry-admin-password
+        - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+          value: http://admin:${jhipster.registry.password}@jhipster-registry.default.svc.cluster.local:8761/eureka/
         - name: JHIPSTER_METRICS_LOGS_ENABLED
           value: 'true'
         - name: JHIPSTER_LOGGING_LOGSTASH_ENABLED

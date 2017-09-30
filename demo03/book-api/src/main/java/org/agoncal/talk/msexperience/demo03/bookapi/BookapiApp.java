@@ -1,14 +1,16 @@
 package org.agoncal.talk.msexperience.demo03.bookapi;
 
-import io.github.jhipster.config.JHipsterConstants;
 import org.agoncal.talk.msexperience.demo03.bookapi.config.ApplicationProperties;
 import org.agoncal.talk.msexperience.demo03.bookapi.config.DefaultProfileUtil;
+
+import io.github.jhipster.config.JHipsterConstants;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;

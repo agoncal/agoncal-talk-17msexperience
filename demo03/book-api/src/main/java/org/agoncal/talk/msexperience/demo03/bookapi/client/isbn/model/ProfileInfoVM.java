@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * ProfileInfoVM
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-09-13T08:37:49.439+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-09-30T10:04:58.923+02:00")
 
 public class ProfileInfoVM   {
   @JsonProperty("activeProfiles")

@@ -4,7 +4,7 @@
       "packageName": "org.agoncal.talk.msexperience.demo03.bookweb",
       "microservicePath": "../book-api"
     },
-    "jhipsterVersion": "4.8.0",
+    "jhipsterVersion": "4.9.0",
     "baseName": "bookweb",
     "packageName": "org.agoncal.talk.msexperience.demo03.bookweb",
     "packageFolder": "org/agoncal/talk/msexperience/demo03/bookweb",

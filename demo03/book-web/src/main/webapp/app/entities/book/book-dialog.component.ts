@@ -21,7 +21,7 @@ export class BookDialogComponent implements OnInit {
 
     constructor(
         public activeModal: NgbActiveModal,
-        private alertService: JhiAlertService,
+        private jhiAlertService: JhiAlertService,
         private bookService: BookService,
         private eventManager: JhiEventManager
     ) {
@@ -62,7 +62,7 @@ export class BookDialogComponent implements OnInit {
     }
 
     private onError(error: any) {
-        this.alertService.error(error.message, null, null);
+        this.jhiAlertService.error(error.message, null, null);
     }
 }
 

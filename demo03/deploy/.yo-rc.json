@@ -7,7 +7,7 @@
     ],
     "directoryPath": "../",
     "serviceDiscoveryType": "eureka",
-    "jwtSecretKey": "1b7f103268a79c471e4b36c7867939cb153a8d6e",
+    "jwtSecretKey": "599bfbf59f5645bd8ea228fb492e809f14ffbe10",
     "dockerRepositoryName": "agoncal",
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "default",
