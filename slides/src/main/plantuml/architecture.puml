@@ -1,0 +1,44 @@
+@startuml
+actor "3rd party" as third
+actor "Users" as user
+actor "Admin" as admin
+node "Gateway ng + auth" as gate
+node "API Sponsor" as sponsor
+node "API CFP" as cfp
+node "API Schedule" as sched
+node "Static" as static
+node "API Scan" as scan
+node "API Registration" as reg
+node "API Admin" as ad
+node "Monitoring ELK" as monitor
+
+database "Registration" as dbreg
+database "Scan" as dbscan
+
+user ..> gate
+admin ..> gate
+sponsor <.. third
+gate ..> sponsor: http
+gate ..> cfp: http
+gate ..> sched: http
+gate ..> static: http
+gate ..> scan: http
+gate ..> reg: http
+gate ..> ad: http
+
+sponsor ..> static
+sched ..> static
+
+reg ..> dbreg
+scan ..> dbscan
+ad ..> dbreg
+ad ..> dbscan
+
+gate ..> monitor
+sponsor ..> monitor
+cfp ..> monitor
+sched ..> monitor
+scan ..> monitor
+reg ..> monitor
+
+@enduml
