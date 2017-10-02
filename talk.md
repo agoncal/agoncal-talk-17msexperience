@@ -51,6 +51,18 @@ public class IsbnResource {
 
 # Demo 04 : JHipster
 
+## Clean directory `$CODE_HOME/MSExp`
+
+* Remove old numberApi and copy new one 
+* `rm -rf *` (`rm -rf .*` if needed for hidden files)
+* `cp -rf ../Agoncal/agoncal-talk-17msexperience/demo03/number-api/ ./number-api`
+
+## Book API with JHipster
+
+* `$CODE_HOME/MSExp/mkdir book-api`
+* `cd book-api`
+
+
 ## Generate Client API using Swagger
 
 * `yo jhipster-swagger-cli`
