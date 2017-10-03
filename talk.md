@@ -1,17 +1,18 @@
 # Talk naration
 
 * Increase fonts in console, IDE
+* `rm -rf *` in `$CODE_HOME/MSExp`
 
-# Demo 01 : Microservice Number API 
+# Demo 01 : Microservice Number API (Antonio)
 
 ## Number API with Spring Boot
 
 * Go to [http://start.spring.io]()
-* Group Id : `org.msexpe`
+* Group Id : `org.msexp`
 * Artifact Id : `numberapi`
-* Add Web dependency
+* Add a *Web* dependency
 * Download and Unzip to `$CODE_HOME/MSExp`
-* Open project in Intellij Idea
+* Open project in Intellij Idea (`idea pom.xml`)
 * Create package `rest`
 * Create class `IsbnResource`
 
@@ -31,7 +32,9 @@ public class IsbnResource {
 
 ## Add Swagger
 
-* Add Swagger dependencies in `pom.xml`
+* Add Swagger dependencies in `pom.xml` (enter `swag` and `TAB`)
+
+```
         <!-- Swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -43,11 +46,12 @@ public class IsbnResource {
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.6.1</version>
         </dependency>
+```
 
-* Add `@EnableSwagger2` tp `NumberapiApplication`
+* Add `@EnableSwagger2` to `NumberapiApplication`
 * Go to [http://localhost:8080/v2/api-docs]()
 
-# Demo 02 : Create a Web app, hosting the Java Web API
+# Demo 02 : Create a Web app, hosting the Java Web API (Sebastien)
 
 Full tutorial on this page : [https://docs.microsoft.com/fr-fr/azure/app-service/app-service-deploy-spring-boot-web-app-on-azure](https://docs.microsoft.com/fr-fr/azure/app-service/app-service-deploy-spring-boot-web-app-on-azure)
 
@@ -79,7 +83,7 @@ Full tutorial on this page : [https://docs.microsoft.com/fr-fr/azure/app-service
 * Swagger UI on [http://msexp17.azurewebsites.net/swagger-ui.html#/isbn-resource]()
 
 
-# Demo 03 : Angular app for Number API 
+# Demo 03 : Angular app for Number API (Sebastien)
 
 ## 1- Create a new ASP.NET CORE 2.0 Angular 4 project
 
@@ -174,7 +178,7 @@ az acs create --orchestrator-type kubernetes --resource-group rgk8msexp --name k
 
 ```
 
-# Demo 04 : JHipster
+# Demo 04 : JHipster (Antonio)
 
 ## Clean directory `$CODE_HOME/MSExp`
 
@@ -184,11 +188,17 @@ az acs create --orchestrator-type kubernetes --resource-group rgk8msexp --name k
 * `cp -rf ../Agoncal/agoncal-talk-17msexperience/demo03/number-api/ ./number-api`
 * Open the new number-api project in Intellij
 
+## Run Number API (Show JHipster Registry with Number API)
+
+* Run JHipster Registry `docker-compose -f number-api/number-api/src/main/docker/jhipster-registry.yml up`
+* Goto JHipster Registry [http://localhost:8761]()
+* Run number-api and show registry
+
 ## Create the Microservice Book API with JHipster
 
 * `$CODE_HOME/MSExp/mkdir book-api`
 * `cd book-api`
-* `jhipster` / application name `bookapi` / port `8082` / package `org.msexpe.bookapi` / db `MongoDB`
+* `jhipster` / Microservice / application name `bookapi` / port `8082` / package `org.msexp.bookapi` / db `MongoDB`
 * Open project in Intellij IDEA
 
 ### Add the Book entity
@@ -196,12 +206,22 @@ az acs create --orchestrator-type kubernetes --resource-group rgk8msexp --name k
 * `jhipster entity book`
 * title (String) / price (Integer) / isbn (String) 
 
+## Run Book API (show JHipster Registry with Book API)
+
+* MongoDB for Book API
+  * Show `book-api/src/main/docker/mongodb.yml`
+  * `docker-compose -f book-api/src/main/docker/mongodb.yml up -d`
+* Show code `BookResource`
+* Run book-api in Intellij IDEA
+* Goto JHipster Registry [http://localhost:8761]()
+
 ## Create the Microservice Gateway
 
 * `cd ..`
 * `mkdir book-web`
 * `cd book-web`
-* `jhipster` / application name `bookweb` / port `8080` / package `org.msexpe.bookweb` / db `PostgreSQL`
+* `jhipster` / Gateway / application name `bookweb` / port `8080` / package `org.msexp.bookweb` / db `PostgreSQL`
+* Open project in Intellij IDEA
 
 ### Add the Book entity
 
@@ -209,29 +229,13 @@ az acs create --orchestrator-type kubernetes --resource-group rgk8msexp --name k
 * From microservice
 * root directory: `../book-api`
 
-### Show code
+## Run Gateway (Show JHipster Registry with Gateway)
 
-* `BookResource`
-
-## Run Docker components MongoDB / Postgres / Registry 
-
-* `$CODE_HOME/MSExp`
-* MongoDB for Book API
-  * Show `book-api/src/main/docker/mongodb.yml`
-  * `docker-compose -f book-api/src/main/docker/mongodb.yml up -d`
 * Postgres for Gateway API
   * Show `book-web/src/main/docker/mongodb.yml`
   * `docker-compose -f book-api/src/main/docker/mongodb.yml up -d`
-* Registry
-  * Show `book-web/src/main/docker/jhipster-registry.yml`
-  * `docker-compose -f src/main/docker/jhipster-registry.yml up`
-
-## Run Number API / Book API / Gateway
-
-* Run the 3 projects in Intellij IDEA
 * Go to [http://localhost:8080/]()
-* Show Chrome console / Network tab / Clear
-* Create a book
+* Create a book /!\ No Isbn /!\
 
 ## Generate Client API using Swagger
 
@@ -257,13 +261,7 @@ az acs create --orchestrator-type kubernetes --resource-group rgk8msexp --name k
 
 * Redeploy
 
-## Generate Kubernetes
-
-
-* `mkdir deploy && cd deploy`
-* `jhipster kubernetes`
-
-# Demo 05 : JHipster dans Azure
+# Demo 05 : JHipster in Azure (Sebastien)
 
 * From `/demo03` folder, open a terminal command an execute :
 
